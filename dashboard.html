@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छात्र डैशबोर्ड - PPIC ERP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #003366;
+            margin-top: 0;
+        }
+        .logout-btn {
+            display: inline-block;
+            background-color: #d9534f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .logout-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>1850 PPIC Piparhata Bisaura Meja Prayagraj</h2>
+        <p>छात्र ERP पोर्टल - डैशबोर्ड</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h3>स्वागत है, छात्र!</h3>
+            <p><strong>नाम:</strong> राहुल कुमार</p>
+            <p><strong>एनरोलमेंट नंबर:</strong> PPIC/2026/001</p>
+            <p><strong>कोर्स:</strong> D.El.Ed / B.Ed</p>
+        </div>
+
+        <div class="card">
+            <h3>अटेंडेंस (उपस्थिति)</h3>
+            <p>कुल उपस्थिति: <strong>85%</strong></p>
+        </div>
+
+        <div class="card">
+            <h3>फीस विवरण</h3>
+            <p>कुल फीस: ₹ 45,000</p>
+            <p>जमा राशि: ₹ 30,000</p>
+            <p>शेष राशि (Due): <span style="color: red;">₹ 15,000</span></p>
+        </div>
+
+        <div class="card">
+            <h3>कॉलेज के मुख्य नोटिस</h3>
+            <ul>
+                <li>आगामी सेमेस्टर परीक्षाएं अगले महीने से शुरू होंगी।</li>
+                <li>सभी छात्र समय पर अपनी बकाया फीस जमा करें।</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="logout-btn">लॉग आउट (Logout)</a>
+    </div>
+
+</body>
+</html>
