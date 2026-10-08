@@ -5,16 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1850 PPIC Piparhata Bisaura Meja Prayagraj - ERP Login</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* एरर मैसेज के लिए छोटी सी स्टाइल */
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="login-box">
         <h2>1850 PPIC ERP Portal</h2>
         <p>पिपरहता बिसौरा, मेजा, प्रयागराज, उत्तर प्रदेश</p>
-        <form>
-            <input type="text" placeholder="यूज़र आईडी / एनरोलमेंट नंबर" required>
-            <input type="password" placeholder="पासवर्ड" required>
+        
+        <!-- फॉर्म जिसमें ID दी गई है ताकि JavaScript इसे पहचान सके -->
+        <form id="loginForm" onsubmit="validateLogin(event)">
+            <input type="text" id="username" placeholder="यूज़र आईडी (जैसे: admin)" required>
+            <input type="password" id="password" placeholder="पासवर्ड (जैसे: 1234)" required>
             <button type="submit">लॉगिन करें</button>
+            <p id="errorMsg" class="error-msg">गलत यूज़र आईडी या पासवर्ड!</p>
         </form>
     </div>
+
+    <script>
+        function validateLogin(event) {
+            // पेज को रीफ्रेश होने से रोकें
+            event.preventDefault();
+
+            // यूजर द्वारा डाला गया इनपुट लें
+            var user = document.getElementById('username').value;
+            var pass = document.getElementById('password').value;
+
+            // यहाँ आप अपनी पसंद की यूज़र आईडी और पासवर्ड सेट कर सकते हैं
+            var correctUser = "admin";
+            var correctPass = "1234";
+
+            // जाँच करें कि आईडी और पासवर्ड सही हैं या नहीं
+            if (user === correctUser && pass === correctPass) {
+                // सही होने पर डैशबोर्ड पर भेजें
+                window.location.href = "dashboard.html";
+            } else {
+                // गलत होने पर एरर मैसेज दिखाएं
+                document.getElementById('errorMsg').style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
